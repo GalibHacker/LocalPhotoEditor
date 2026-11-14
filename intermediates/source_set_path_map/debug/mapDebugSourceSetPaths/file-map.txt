@@ -1,0 +1,7 @@
+com.example.localphotoeditor.app-pngs-0 /config/Desktop/LocalPhotoEditor/app/build/generated/res/pngs/debug
+com.example.localphotoeditor.app-resValues-1 /config/Desktop/LocalPhotoEditor/app/build/generated/res/resValues/debug
+com.example.localphotoeditor.app-packageDebugResources-2 /config/Desktop/LocalPhotoEditor/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.localphotoeditor.app-packageDebugResources-3 /config/Desktop/LocalPhotoEditor/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.localphotoeditor.app-debug-4 /config/Desktop/LocalPhotoEditor/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.example.localphotoeditor.app-debug-5 /config/Desktop/LocalPhotoEditor/app/src/debug/res
+com.example.localphotoeditor.app-main-6 /config/Desktop/LocalPhotoEditor/app/src/main/res

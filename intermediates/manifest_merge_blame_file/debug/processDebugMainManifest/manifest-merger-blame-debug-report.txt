@@ -1,0 +1,44 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.localphotoeditor"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <application
+11-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:2:5-8:19
+12        android:allowBackup="false"
+12-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:2:85-112
+13        android:debuggable="true"
+14        android:extractNativeLibs="true"
+15        android:label="Local Photo Editor"
+15-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:2:50-84
+16        android:supportsRtl="true"
+16-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:2:113-139
+17        android:theme="@style/AppTheme" >
+17-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:2:18-49
+18        <activity
+18-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:3:9-7:20
+19            android:name="com.example.localphotoeditor.MainActivity"
+19-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:3:19-47
+20            android:exported="true"
+20-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:3:85-108
+21            android:screenOrientation="portrait" >
+21-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:3:48-84
+22            <intent-filter>
+22-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:4:13-6:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:5:17-68
+23-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:5:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:5:68-127
+25-->/config/Desktop/LocalPhotoEditor/app/src/main/AndroidManifest.xml:5:78-125
+26            </intent-filter>
+27        </activity>
+28    </application>
+29
+30</manifest>
