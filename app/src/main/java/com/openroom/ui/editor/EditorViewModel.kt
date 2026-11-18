@@ -23,4 +23,8 @@ class EditorViewModel : ViewModel() {
     fun redo() {
         _params.value = history.redo()
     }
+
+    fun reset() {
+        update { EditParams() }
+    }
 }

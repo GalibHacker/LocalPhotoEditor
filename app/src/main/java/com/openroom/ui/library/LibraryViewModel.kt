@@ -13,5 +13,8 @@ import kotlinx.coroutines.launch
 @HiltViewModel
 class LibraryViewModel @Inject constructor(repository: PhotoRepository) : ViewModel() {
     val photos = repository.observePhotos().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList<PhotoEntity>())
-    init { viewModelScope.launch { repository.importFromMediaStore() } }
+
+    fun importPhotos() {
+        viewModelScope.launch { repository.importFromMediaStore() }
+    }
 }
