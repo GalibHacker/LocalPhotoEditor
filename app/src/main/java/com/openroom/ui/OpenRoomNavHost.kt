@@ -8,11 +8,24 @@ import com.openroom.ui.editor.EditorScreen
 import com.openroom.ui.library.LibraryScreen
 
 @Composable
-fun OpenRoomNavHost(navController: NavHostController) {
+fun OpenRoomNavHost(
+    navController: NavHostController,
+    hasPhotoPermission: Boolean,
+    onRequestPhotoPermission: () -> Unit
+) {
     NavHost(navController, startDestination = "library") {
         composable("library") {
-            LibraryScreen(onOpen = { navController.navigate("editor/${it.substringAfterLast('/')}") })
+            LibraryScreen(
+                hasPhotoPermission = hasPhotoPermission,
+                onRequestPhotoPermission = onRequestPhotoPermission,
+                onOpen = { navController.navigate("editor/${it.substringAfterLast('/')}") }
+            )
         }
-        composable("editor/{photoId}") { EditorScreen(onBack = { navController.popBackStack() }) }
+        composable("editor/{photoId}") { entry ->
+            EditorScreen(
+                photoId = entry.arguments?.getString("photoId").orEmpty(),
+                onBack = { navController.popBackStack() }
+            )
+        }
     }
 }
