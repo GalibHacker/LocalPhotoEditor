@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -21,6 +22,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun LibraryScreen(onOpen: (String) -> Unit, viewModel: LibraryViewModel = hiltViewModel()) {
     val photos by viewModel.photos.collectAsStateWithLifecycle()
     Scaffold(topBar = { TopAppBar(title = { Text("OpenRoom") }) }) { padding ->
