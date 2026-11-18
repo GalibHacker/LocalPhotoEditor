@@ -1,1 +1,0 @@
-com.example.localphotoeditor:style/AppTheme = 0x7f010000
