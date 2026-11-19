@@ -44,6 +44,11 @@ object ShaderLoader {
             color += (0.5 - luminance) * uShadows * 0.25;
             color += uWhites * 0.1;
             color -= uBlacks * 0.1;
+            float maxChannel = max(max(color.r, color.g), color.b);
+            float minChannel = min(min(color.r, color.g), color.b);
+            float saturationAmount = maxChannel - minChannel;
+            float vibranceScale = uVibrance * (1.0 - saturationAmount);
+            color = mix(vec3(luminance), color, 1.0 + vibranceScale);
             color = mix(vec3(luminance), color, 1.0 + uSaturation);
             outColor = vec4(clamp(color, 0.0, 1.0), 1.0);
         }

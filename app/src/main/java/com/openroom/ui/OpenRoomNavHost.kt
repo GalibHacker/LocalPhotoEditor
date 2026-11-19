@@ -1,6 +1,7 @@
 package com.openroom.ui
 
 import androidx.compose.runtime.Composable
+import android.net.Uri
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,8 +12,14 @@ import com.openroom.ui.library.LibraryScreen
 fun OpenRoomNavHost(navController: NavHostController) {
     NavHost(navController, startDestination = "library") {
         composable("library") {
-            LibraryScreen(onOpen = { navController.navigate("editor/${it.substringAfterLast('/')}") })
+            LibraryScreen(onOpen = { uri -> navController.navigate("editor/${Uri.encode(uri)}") })
         }
-        composable("editor/{photoId}") { EditorScreen(onBack = { navController.popBackStack() }) }
+        composable("editor/{photoUri}") { entry ->
+            val photoUri = Uri.decode(entry.arguments?.getString("photoUri").orEmpty())
+            EditorScreen(
+                photoUri = photoUri,
+                onBack = { navController.popBackStack() }
+            )
+        }
     }
 }
